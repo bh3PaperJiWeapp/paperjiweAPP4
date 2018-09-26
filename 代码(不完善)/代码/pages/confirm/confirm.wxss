@@ -49,13 +49,41 @@ font-weight: bold;
 font-weight: bold;
 }
 
+.sudden{
+  width: 610rpx;
+  height: 200rpx;
+  color: #ffc000;
 
+
+}
+.textstyle{
+  align-items: center;
+  color: black;
+}
+
+.input{top: 460rpx;
+  width: 560rpx;
+  height: 120rpx;
+  font-size: 45rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  background-color: #ffc000;
+  z-index: -1;
+}
+
+.gfjstyle{
+  width: 252rpx;
+  height: 294rpx;
+  top: 270rpx;
+  left: 240rpx;
+  position: relative;
+}
 
 .confirm_bg{
  position: absolute;
-  left: 90rpx;
+  left: 88rpx;
   top: 200rpx;
-width: 620rpx;
-height: 751rpx;
+width: 600rpx;
+height: 660rpx;
 z-index: -1;
 }

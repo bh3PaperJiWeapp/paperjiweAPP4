@@ -18,7 +18,8 @@ emmmm因为时间问题(总计一个小时不到)页面只复制了大概
   <text class='mj_xiaoguo2'>效果2</text>
   </view>
   </view>
-
+<button class='input'>确认</button>
+<image src='../image/gfj.png'  class='gfjstyle'></image>
 
 
   </view>

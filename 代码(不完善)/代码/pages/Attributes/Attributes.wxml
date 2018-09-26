@@ -4,25 +4,33 @@
 界面一直试验不成功,代码已删除
 emmmm因为时间问题(总计一个小时不到)页面只复制了大概
 放置名称界面,wxml未补完,wxss需要效果,image导入)-->
-
+<form>
   <view class='container'>
 <image src='../image/gf_bg.png' class='bottom_bg'></image>
 
 <view >
- <text class='miaoju'>名称</text>
- 
- <text class='shuju'>伤害</text>
- <text class='shuju2'>命中</text>
-  <text class='shuju3'>暴击</text>
-  <text class='shuju4'>爆伤</text>
-  <text class='shuju5'>穿甲弹</text>
-  <text class='shuju6'>弹链箱/芯片</text>
+ <text class='name'>名称</text>
+ </view>
+
+ <view>
+ <text class='shuju'>伤 害</text><input class='input_new'></input>
+ <text class='shuju2'>命 中</text><input class='input_new2'></input>
+  <text class='shuju3'>暴 击</text><input class='input_new3'></input>
+  <text class='shuju4'>爆 伤</text><input class='input_new4'></input>
+  <text class='shuju5'>穿 甲 弹</text><input class='input_new5'></input>
+  <text class='shuju6'>弹 链 箱/芯 片</text><input class='input_new6'></input>
+  
  </view>
  
 <view>
   <image src='../image/confirm_bg.png'class='confirm_bg' ></image>
+  <image src='../image/gfj.png' class='gfjstyle'></image>
   </view>
 
-
-
+  <view class='bottom_menu'>
+    <button class='clean'>撤 销</button>
+  <navigator url='../confirm/confirm'>  <button class='input'>确 认</button> </navigator>
+  
   </view>
+
+  </view></form>
