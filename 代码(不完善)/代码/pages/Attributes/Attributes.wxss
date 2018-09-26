@@ -1,0 +1,66 @@
+.container{
+  font-family: "微软雅黑"; 
+
+}
+
+.miaoju{
+ 
+  font-size: 35rpx;
+position: absolute;
+  color: white;
+  top: 280rpx;
+  left: 150rpx;
+  font-weight: bold;
+z-index: 5;
+}
+
+.shuju{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+.shuju2{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+.shuju3{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+.shuju4{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+.shuju5{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+.shuju6{
+  color: gray;
+  font-size: 28rpx;
+  position: absolute;
+  top: 320rpx;left: 250rpx;
+}
+
+
+.confirm_bg{
+ position: relative;
+  margin-left: 60rpx;
+width: 620rpx;
+height: 751rpx;
+z-index: -1;
+}

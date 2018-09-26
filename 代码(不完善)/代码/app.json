@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/confirm/confirm",
+    "pages/Attributes/Attributes"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b2b2b",
+    "navigationBarTitleText": "少前瞄具选择器",
+    "navigationBarTextStyle": "white"
+  }
+}

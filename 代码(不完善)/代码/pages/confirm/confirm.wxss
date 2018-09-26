@@ -1,0 +1,61 @@
+.container{
+  font-family: "微软雅黑"; 
+
+}
+
+.miaoju{
+ 
+  font-size: 35rpx;
+ position: relative;
+  color: white;
+  top: 30rpx;
+  left: 100rpx;
+  font-weight: bold;
+
+}
+
+.mj_name{
+  color: #ffc000;
+   position: relative;
+   top: 100rpx;
+ left: -50rpx;
+ font-weight: bold;
+font-size: 55rpx;
+
+}
+.mj_xiaoguo{
+  color: gray;
+   position: relative;
+  top: 180rpx;
+  left: -265rpx;
+font-weight: bold;
+
+}
+.mj_xiaoguo1{
+   font-size: 28rpx;
+   color: gray;
+   position: relative;
+  top: 230rpx;
+  left: -270rpx;
+font-weight: bold;
+}
+
+.mj_xiaoguo2{
+  font-size: 28rpx;
+   color: gray;
+   position: relative;
+  top: 280rpx;
+  left: -345rpx;
+font-weight: bold;
+}
+
+
+
+.confirm_bg{
+ position: absolute;
+  left: 90rpx;
+  top: 200rpx;
+width: 620rpx;
+height: 751rpx;
+z-index: -1;
+}

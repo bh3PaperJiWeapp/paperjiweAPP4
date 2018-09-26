@@ -1,0 +1,24 @@
+<!--confirm.wxml-->
+<!--  效果界面   target="_blank"
+界面一直试验不成功,代码已删除
+emmmm因为时间问题(总计一个小时不到)页面只复制了大概
+放置名称界面,wxml未补完(颜色以给出),wxss需要效果,image导入)-->
+  <view class='container'>
+<image src='../image/gf_bg.png' class='bottom_bg'></image>
+
+ 
+<view>
+  <image src='../image/confirm_bg.png'class='confirm_bg' > 
+ </image>
+ <view >
+ <text class='miaoju'>当前瞄具选择</text>
+<text class='mj_name'>瞄具名称</text>
+ <text class='mj_xiaoguo'>效果</text>
+ <text class='mj_xiaoguo1'>效果1</text>
+  <text class='mj_xiaoguo2'>效果2</text>
+  </view>
+  </view>
+
+
+
+  </view>

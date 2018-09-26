@@ -1,0 +1,259 @@
+<!--index.wxml-->
+<form>
+<view class='container'>
+  <image src='../image/bottom_bg.png'class='bottom_bg'></image>
+  <view class='left_menu'>
+    <image src='../image/left_bg.png' class='pageBack'></image>
+
+    <!--.js对象通过location对象跳转-->
+    <button>地 图 选 择</button>
+    <button>人 形 选 择</button>
+    <button>妖 精 选 择</button>
+    <button>光 环 选 择</button>
+    <button>装 备 选 择</button>
+    <button>瞄 具 选 择</button>
+  </view>
+  <view class='long_menu'><!--长页面-->
+    <view class='map'>
+      <title>地 图 选 择</title>
+
+      <!--select做下拉表单组件-->
+      <text class='text1'>\n战 役</text><!--picker-->
+      <text class='text2'>\n关 卡</text><!--picker-->
+
+      <!--不支持table，用view实现表格-->
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">编 号</view>
+          <view class="th">生 命</view>
+          <view class="th">护 甲</view>
+          <view class='th'>闪 避</view>
+        </view>
+        <block wx:for="{{listData}}" wx:key="{{code}}">
+          <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+            <view class="td">{{item.code}}</view>
+            <view class="td">{{item.text}}</view>
+            <view class="td">{{item.type}}</view>
+            <view class='td'>{{item.type}}</view>
+          </view>
+          <view class="tr" wx:else>
+            <view class="td">{{item.code}}</view>
+            <view class="td">{{item.text}}</view>
+            <view class="td">{{item.type}}</view>
+            <view class='td'>{{item.type}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='people'>
+      <title>人 形 选 择</title>
+      <!--select做下拉表单组件-->
+      <text class='text3'>枪 种</text><!--picker-->
+      
+      
+      <view class='people_data'><!--选取的人形的数据-->
+        <text style='color:gray;position: relative;left: 150rpx;top: 100rpx;'>人 形 名 称</text>
+        <view class='people_img'>
+          <image></image>
+        </view>
+        <view class='inputdata_demo'>
+          <text>伤 害</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>命 中</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>暴 击</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>爆 伤</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>穿甲弹</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>弹链箱/芯片</text>
+          <input class='input_new'></input>
+        </view>
+        <text class='text4'>技 能 种 类</text>
+        <radio-group class="radio_1">
+          <radio>猎杀冲动</radio>
+          <radio>连珠终结</radio>
+          <radio>其他</radio>
+        </radio-group>
+        <view class='inputdata_demo' style='margin-top:130rpx;'>
+          <text>命中提升倍率</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo' style='margin-top:130rpx;'>
+          <text>暴击提升倍率</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>持续时间</text>
+          <input class='input_new'></input>
+        </view>
+      </view>
+    </view>
+
+    <view class='elf'>
+      <title>妖 精 选 择</title>
+      <!--select做下拉表单组件-->
+      <text class='text6'>妖 精</text><!--picker-->
+      <view class='elf_data'><!--选取的妖精的数据-->
+        <text style='color:gray;position: relative;left:-80rpx;top: 100rpx;'>妖 精 名 称</text>
+        <view class='people_img'>
+          <image></image>
+        </view>
+        <view class='inputdata_demo'>
+          <text>伤 害</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>命 中</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>暴 击</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>爆 伤</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>技 能</text>
+          <input class='input_new'></input>
+        </view>
+      </view>
+    </view>
+
+    <view class='halo'>
+      <title>光 环 选 择</title>
+      <!--select做下拉表单组件-->
+      <text class='text8'>光 环</text><!--picker-->
+      <view class='halo_data'>
+        <text style='color:gray;position: relative;left:-80rpx;top: 100rpx;'>光 环 名 称</text>
+        <view class='people_img'>
+          <image></image>
+        </view>
+        <view class='inputdata_demo'>
+          <text>伤 害</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>命 中</text>
+          <input class='input_new'></input>
+        </view>
+        <view class='inputdata_demo'>
+          <text>暴 击</text>
+          <input class='input_new'></input>
+        </view>
+      </view>
+    </view>
+
+    <view class='zhuangbei'>
+      <title>装 备 选 择</title>
+      <!--select做下拉表单组件-->
+      <view class='zhuangbei_data1'>
+        <text class='text9'>弹链箱</text><!--picker-->
+          <view class='people_img' style='display:block;position: relative;top: 1400rpx;'>
+            <image></image>
+          </view>
+          <text class='text10'>弹链箱效果</text>
+         <navigator url='../Attributes/Attributes'>   <button class='data1_b'>自定义属性</button> </navigator>
+          <view class='data_show'><!--绑定弹链箱的数据-->
+            <text>伤害:{{shanghai}}</text>
+            <text>命中:{{mingzhong}}\n</text>
+            <text>暴击:{{baoji}}</text>
+            <text>爆伤:{{baoshang}}\n</text>
+            <text>弹链:{{danlian}}</text>
+            <text>穿甲:{{chuanjia}}</text>
+          </view>
+      </view>
+
+      <view class='zhuangbei_data1'>
+      <!--select做下拉表单组件-->
+        <text class='text11'>穿甲弹</text><!--picker-->
+          <view class='people_img' style='display:block;position: relative;top: 1500rpx;'>
+            <image></image>
+          </view>
+          <text class='text12'>穿甲弹效果</text>
+        <navigator url='../Attributes/Attributes'>    <button class='data1_b2'>自定义属性</button></navigator>
+          <view class='data_show_2'><!--绑定弹链箱的数据-->
+            <text>伤害:{{shanghai}}</text>
+            <text>命中:{{mingzhong}}\n</text>
+            <text>暴击:{{baoji}}</text>
+            <text>爆伤:{{baoshang}}\n</text>
+            <text>弹链:{{danlian}}</text>
+            <text>穿甲:{{chuanjia}}</text>
+          </view>
+      </view>
+    </view>
+
+    <view class='miaoju'>
+      <title>瞄 具 选 择</title>
+      <radio-group class="radio_2">
+        <radio>红点</radio>
+        <radio>全息</radio>
+        <radio>光学</radio>
+      </radio-group>
+      <view class='change_mj'><!--选择四个瞄具-->
+        <view class='image1'>
+          <image></image>
+          <text>瞄具名</text>
+        </view>
+        <view class='image2'>
+          <image></image>
+          <text>瞄具名</text>
+        </view>
+        <view class='image3'>
+          <image></image>
+          <text>瞄具名</text>
+        </view>
+        <view class='image4'>
+          <image></image>
+          <text>瞄具名</text>
+        </view>
+      </view>
+      <text class='text_end'>已 选</text>
+      <!--表格-->
+      <view class="rb_tab">
+        <view class='rb_tr'></view>
+          <view class='rb_td'>编 号</view>
+          <view class='rb_td'>名 称</view>
+          <view class='rb_td'>最终效果</view>
+          <view class='rb_td'>定义属性</view>
+        <view class='rb_tr'></view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>
+            <button>自定义</button>
+          </view>
+        <view class='rb_tr'></view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>变量</view>
+          <view class='rb_td'>
+             <button>自定义</button>
+          </view>
+      </view>
+    </view>
+  </view>
+
+  <text class='end'>^_^</text>
+
+  <view class='bottom_menu'>
+    <button class='clean'>撤 销</button>
+  <navigator url='../confirm/confirm'>  <button class='input'>输 入 计 算</button> </navigator>
+  
+  </view>
+</view>
+</form>

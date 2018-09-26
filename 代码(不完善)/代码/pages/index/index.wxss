@@ -1,0 +1,408 @@
+/**index.wxss**/
+.container{
+  font-family: "微软雅黑"; 
+  display: flex;
+}
+
+.left_menu{
+  position:fixed;
+  flex: space-between;
+  top: 0;
+  left: -10rpx;
+  height: 98%;
+  width: 35%;
+}
+.left_menu button{
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: white;
+  background-color: transparent;
+  top: 20rpx;
+}
+.left_menu button:active{
+  background-color: #ffc000;
+  color: black;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.long_menu{
+  width: 65%;
+  height: 2300rpx;
+  position:relative;
+  left: 0rpx;
+  top: -170rpx;
+}
+
+.text1{
+  display: inline;
+  position: relative;
+  top: 30rpx;
+  left: 150rpx;
+  color:grey;
+}
+.text2{
+  position: relative;
+  top: 60rpx;
+  left: 150rpx;
+  color:grey;
+}
+
+.long_menu title{
+  margin-left: 150rpx;
+  font-size: 45rpx;
+  font-family: "微软雅黑";
+  color:white;
+}
+
+.bottom_menu{
+  display:flex;
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+.clean{
+
+  width: 250rpx;
+  height: 120rpx;
+  font-family: "微软雅黑";
+  font-size: 45rpx;
+  font-weight: bold;
+  color: white;
+  background-color: #3f3b2f;
+}
+.input{
+  width: 500rpx;
+  height: 120rpx;
+  font-size: 45rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  background-color: #ffc000;
+}
+.people_data radio{
+  margin: 20rpx;
+}
+.table {
+  border: 2rpx solid grey;
+  margin-left: 150rpx;
+  margin-top: 150rpx;
+  margin-bottom: 80rpx;
+  width: 420rpx;
+}
+.tr {
+  border: 1rpx solid gray;
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+}
+.td {
+    width:120rpx;
+    height: 60rpx;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 25rpx;
+}
+.th {
+  border: 2rpx solid gray;
+  width: 180rpx;
+  height: 80rpx;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.text3{
+  color: gray;
+  display: block;
+  position: relative;
+  left: 150rpx;
+  top: 50rpx;
+}
+.people{
+  position: relative;
+  top: 120rpx;
+  bottom: 200rpx;
+}
+.people_img{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  border: 5rpx solid green;
+  position: relative;
+  left: 150rpx;
+  top: 120rpx;
+}
+.inputdata_demo{
+  margin-top: 50rpx;
+  margin-right:50rpx; 
+  float: left;
+  font-size: 30rpx;
+}
+.inputdata_demo text{
+  color: grey;
+  position: relative;
+  left: 150rpx;
+  top: 100rpx;
+}
+.input_demo{
+  display: block;
+  width: 180rpx;
+  height: 60rpx;
+  color:white;/*字体丢失问题*/
+  background-color:gray; 
+  margin-top: 10rpx;
+}
+.input_new{
+  display: block;
+  position: relative;
+  top: 110rpx;
+  left: 150rpx;
+  width: 180rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+  z-index: 6;
+}
+
+.text4{
+  display: block;
+  position: relative;
+  left: 150rpx;
+  top: 160rpx;
+  color: gray;
+}
+.radio_1{
+  float: left;
+  color: gray;
+  font-size: 30rpx;
+  position: relative;
+  left: 130rpx;
+  top: 180rpx;
+}
+
+.elf{
+  position: relative;
+  height: 1000rpx;
+  top: 300rpx;
+  bottom: 200rpx;
+}
+.elf title{
+  display: block;
+  position: relative;
+  top: 200rpx;
+  left: -80rpx;
+}
+.text6{
+  color: gray;
+  position: relative;
+  top: 250rpx;
+  left: -80rpx;
+}
+.elf_data{
+  position: relative;
+  top: 200rpx;
+}
+
+.halo title{
+  position: relative;
+  display: block;
+  top: 900rpx;
+  left: -80rpx;
+}
+.text8{
+  color: gray;
+  position: relative;
+  top: 950rpx;
+  left: -80rpx;
+}
+.halo_data{
+  position: relative;
+  top: 900rpx;
+}
+
+.zhuangbei button{
+ width: 220rpx;
+ font-size: 30rpx;
+  color: white;
+  border-radius: 30rpx;
+  background-color: #496a3e;
+}
+
+
+
+.zhuangbei title{
+  position: relative;
+  display: block;
+  top:1300rpx;
+  left: -80rpx;
+}
+.text9{
+  position: relative;
+  top: 1340rpx;
+  color: grey;
+  left: -80rpx;
+}
+.text10{
+  position: relative;
+  top: 1450rpx;
+  color: grey;
+  left: 140rpx;
+  font-size: 30rpx;
+}
+.data1_b{
+  position:relative;
+  top: 1400rpx;
+  left: 220rpx;
+}
+.data_show{
+  color: gray;
+  position: relative;
+  top: 1400rpx;
+  left: 150rpx;
+  margin: 20rpx;
+}
+.data_show text{
+  position: relative;
+  left: -40rpx;
+  margin: 15rpx;
+}
+.text11{
+  position: relative;
+  top: 1460rpx;
+  color: grey;
+  left: 140rpx;
+  font-size: 40rpx;
+}
+.text12{
+  position: relative;
+  top: 1550rpx;
+  color: grey;
+  left: 140rpx;
+  font-size: 30rpx;
+}
+.data1_b2{
+  position: relative;
+  top: 1500rpx;
+  left: 220rpx;
+}
+.data_show_2{
+  color: gray;
+  position: relative;
+  top: 1500rpx;
+  left: 150rpx;
+  margin: 20rpx;
+}
+.data_show_2 text{
+  position: relative;
+  left: -40rpx;
+  margin: 15rpx;
+}
+
+.miaoju title{
+  position: relative;
+  top: 1700rpx;
+}
+.miaoju radio{
+  margin: 20rpx;
+}
+.radio_2{
+  float: left;
+  color: gray;
+  font-size: 30rpx;
+  position: relative;
+  left: 130rpx;
+  top: 1750rpx;
+}
+.change_mj{
+  display: flex;
+  float: left;
+  width: 450rpx;
+  height: 480rpx;
+  background-color:#313131;
+  border-radius: 20rpx;
+  position: relative;
+  top: 1800rpx;
+  left: 140rpx;
+}
+.change_mj image{
+  width: 150rpx;
+  height: 150rpx;
+  border: 4rpx solid green;
+  border-radius: 10rpx;
+  margin:20rpx;
+  position: relative;
+}
+.change_mj text{
+  position: relative;
+  left: 50rpx;
+  top: -30rpx;
+  color: whitesmoke;
+  font-size: 30rpx;
+}
+.image1{
+  position: relative;
+  left:10rpx;
+}
+.image2{
+  position: relative;
+  left: 50rpx;
+}
+.image3{
+  position: relative;
+  left: -382rpx;
+  top: 225rpx;
+}
+.image4{
+  position: relative;
+  left: -340rpx;
+  top: 225rpx;
+}
+.text_end{
+  position: relative;
+  color: grey;
+  font-size: 40rpx;
+  top: 2450rpx;
+  left: -200rpx;
+}
+
+.rb_tab{
+  position: relative;
+  top: 1950rpx;
+  left: 140rpx;
+  width: 450rpx;
+  display: table;
+  color:gainsboro; 
+  font-size: 27rpx;
+  text-align: center;
+  border: 2rpx solid white;
+}
+.rb_tr{
+  display: table-row;
+  border: 2rpx solid white;
+}
+.rb_td{
+  display: table-cell;
+  border: 2rpx solid white;
+}
+.rb_td button{
+  color: green;
+  font-size: 30rpx;
+  background-color: transparent;
+}
+.end{
+  position: relative;
+  color: grey;
+  top: 5800rpx;
+}
+
+
