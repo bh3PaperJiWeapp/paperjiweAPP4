@@ -1,7 +1,7 @@
 /* pages/attributes/attributes.wxss */
 
 .container {
-  font-family: "微软雅黑";
+  font-family: "huxiaobo-gdh";
 }
 
 .name {
@@ -147,7 +147,7 @@
 .clean {
   width: 250rpx;
   height: 120rpx;
-  font-family: "微软雅黑";
+  font-family: "huxiaobo-gdh";
   font-size: 45rpx;
   font-weight: bold;
   color: white;
@@ -162,7 +162,7 @@
   width: 500rpx;
   height: 120rpx;
   font-size: 45rpx;
-  font-family: "微软雅黑";
+  font-family: "huxiaobo-gdh";
   font-weight: bold;
   background-color: #ffc000;
   position: fixed;

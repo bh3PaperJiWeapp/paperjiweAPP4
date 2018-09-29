@@ -1,89 +1,93 @@
 /* pages/submit/submit.wxss */
 
-.container {
-  font-family: "微软雅黑";
-}
+
 
 .miaoju {
-  font-size: 35rpx;
-  position: relative;
+  font-size: 50rpx;
+ display: flex;
   color: white;
-  top: 30rpx;
-  left: 100rpx;
+  margin-top: 40rpx;
+  margin-left: 150rpx;
   font-weight: bold;
+  z-index: 10;
+  font-family: "huxiaobo-gdh";
 }
 
 .mj_name {
   color: #ffc000;
-  position: relative;
-  top: 100rpx;
-  left: -50rpx;
+ display: flex;
+  margin-top: 20rpx;
+  margin-left: 160rpx;
   font-weight: bold;
   font-size: 55rpx;
 }
 
 .mj_xiaoguo {
+   
+  
   color: gray;
-  position: relative;
-  top: 180rpx;
-  left: -265rpx;
+ display: flex;
+  margin-top: 30rpx;
+  margin-left: 170rpx;
   font-weight: bold;
 }
 
 .mj_xiaoguo1 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 230rpx;
-  left: -270rpx;
+ 
+  margin-top: 20rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 .mj_xiaoguo2 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 280rpx;
-  left: -345rpx;
+ 
+  margin-top: 10rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 .mj_xiaoguo3 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 330rpx;
-  left: -345rpx;
+ 
+  margin-top: 10rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 .mj_xiaoguo4 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 380rpx;
-  left: -345rpx;
+ 
+  margin-top: 10rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 .mj_xiaoguo5 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 430rpx;
-  left: -345rpx;
+ 
+  margin-top: 10rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 .mj_xiaoguo6 {
+   display: flex;
   font-size: 28rpx;
   color: gray;
-  position: relative;
-  top: 480rpx;
-  left: -345rpx;
+ 
+  margin-top: 10rpx;
+  margin-left: 200rpx;
   font-weight: bold;
 }
 
-.sudden {
-  width: 610rpx;
-  height: 200rpx;
-  color: #ffc000;
-}
+
 
 .textstyle {
   align-items: center;
@@ -91,21 +95,27 @@
 }
 
 .input {
-  top: 460rpx;
-  width: 560rpx;
-  height: 120rpx;
+ 
+  margin-top: 35rpx;
+  margin-left: 95rpx;
+  width: 580rpx;
+  height: 100rpx;
   font-size: 45rpx;
-  font-family: "微软雅黑";
+  text-align: center;
+  font-family: "huxiaobo-gdh";
   font-weight: bold;
   background-color: #ffc000;
+
 }
 
 .gfjstyle {
+  display: flex;
+  
   width: 252rpx;
   height: 294rpx;
-  top: 270rpx;
-  left: 240rpx;
-  position: relative;
+  margin-top: -200rpx;
+  margin-left: 500rpx;
+ z-index: 3;
 }
 
 .confirm_bg {
@@ -114,14 +124,14 @@
   top: 200rpx;
   width: 600rpx;
   height: 660rpx;
+  z-index: -6;
 }
 
 .container {
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  
+
   padding: 200rpx 0;
   box-sizing: border-box;
 }
@@ -131,4 +141,5 @@
   height: 100%;
   position: fixed;
   top: 0;
+  z-index: -1000;
 }

@@ -152,29 +152,33 @@ radio{
   height: 100rpx;
   display: flex;
   text-align: center;
+  z-index: 100;
+  font-family: huxiaobo-gdh;
 }
 .reset{
   width: 35%;
   height: 100rpx;
-  font-family: "微软雅黑";
-  font-size: 45rpx;
+
+  font-size: 55rpx;
   font-weight: bold;
   color: white; 
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #3f3b2f;
+  font-family: huxiaobo-gdh;
 }
 .submit{
   width: 65%;
   height: 100rpx;
-  font-size: 45rpx;
+  font-size: 55rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "微软雅黑";
+  
   font-weight: bold;
   background-color: #ffc000;
+   font-family: huxiaobo-gdh;
 }
 /* 表格部分 */
 .table {

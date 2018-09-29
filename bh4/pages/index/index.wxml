@@ -92,11 +92,11 @@
             <input type='digit' bindinput='peopleCriticalPossibilityChange' class='seg-input' value='{{peopleNow.violentAttack}}'></input>
           </view>
           <view class='seg flex-item'>
-            <text class='seg-text'>穿甲弹</text>
+            <text class='seg-text'>穿甲</text>
             <input type='digit' bindinput='peopleCriticalPowerChange' class='seg-input' value='{{peopleNow.detonatingInjury}}'></input>
           </view>
           <view class='seg flex-item'>
-            <text class='seg-text'>弹链箱/芯片</text>
+            <text class='seg-text'>弹链</text>
             <input type='digit' bindinput='peopleChainChange' class='seg-input' value='{{peopleNow.belt}}'></input>
           </view>
         </view>
@@ -210,11 +210,11 @@
             <input type='digit' bindinput='chainBoxCriticalPowerChange' class='seg-input' value='{{chainBoxNow.criticalPower}}'></input>
           </view>
           <view class='seg flex-item'>
-            <text class='seg-text'>穿甲弹</text>
+            <text class='seg-text'>穿甲</text>
             <input type='digit' bindinput='chainBoxPierceChange' class='seg-input' value='{{chainBoxNow.pierce}}'></input>
           </view>
           <view class='seg flex-item'>
-            <text class='seg-text'>弹链箱/芯片</text>
+            <text class='seg-text'>弹链</text>
             <input type='digit' bindinput='chainBoxChainChange' class='seg-input' value='{{chainBoxNow.chain}}'></input>
           </view>
         </view>
