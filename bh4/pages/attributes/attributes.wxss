@@ -1,0 +1,196 @@
+/* pages/attributes/attributes.wxss */
+
+.container {
+  font-family: "微软雅黑";
+}
+
+.name {
+  font-size: 35rpx;
+  position: absolute;
+  color: white;
+  top: 240rpx;
+  left: 150rpx;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.shuju {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: 100rpx;
+  left: -100rpx;
+}
+
+.shuju2 {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: -10rpx;
+  left: 150rpx;
+}
+
+.shuju3 {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: 0rpx;
+  left: -100rpx;
+}
+
+.shuju4 {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: -110rpx;
+  left: 150rpx;
+}
+
+.shuju5 {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: -100rpx;
+  left: -100rpx;
+}
+
+.shuju6 {
+  color: #929292;
+  font-size: 28rpx;
+  position: relative;
+  top: -210rpx;
+  left: 150rpx;
+}
+
+.input_new {
+  position: relative;
+  top: 100rpx;
+  left: -100rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.input_new2 {
+  position: relative;
+  top: -10rpx;
+  left: 150rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.input_new3 {
+  position: relative;
+  top: 0rpx;
+  left: -100rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.input_new4 {
+  position: relative;
+  top: -110rpx;
+  left: 150rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.input_new5 {
+  position: relative;
+  top: -100rpx;
+  left: -100rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.input_new6 {
+  position: relative;
+  top: -210rpx;
+  left: 150rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+
+.confirm_bg {
+  position: absolute;
+  left: 88rpx;
+  top: 200rpx;
+  width: 600rpx;
+  height: 660rpx;
+}
+
+.gfjstyle {
+  width: 252rpx;
+  height: 294rpx;
+  top: -200rpx;
+  left: 240rpx;
+  position: relative;
+}
+
+.clean {
+  width: 250rpx;
+  height: 120rpx;
+  font-family: "微软雅黑";
+  font-size: 45rpx;
+  font-weight: bold;
+  color: white;
+  background-color: #3f3b2f;
+  position: fixed;
+  float: left;
+  left: 0rpx;
+  bottom: 0rpx;
+}
+
+.input {
+  width: 500rpx;
+  height: 120rpx;
+  font-size: 45rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  background-color: #ffc000;
+  position: fixed;
+  float: right;
+  bottom: 0rpx;
+  right: 0rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.pageBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.bottom_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}

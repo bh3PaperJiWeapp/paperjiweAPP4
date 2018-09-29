@@ -1,0 +1,238 @@
+/**index.wxss**/
+/* 整体布局部分 */
+page{
+  height: 100%;
+}
+.flex-wrp{
+  flex-direction:row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.main{
+  height: 100%;
+  display: flex;
+}
+.left{
+  height: 100%;
+  width: 35%;
+  text-align: center;
+  background-size: 100% 99%;
+}
+.right{
+  padding-left: 3%;
+  height: 100%;
+  width: 62%;
+}
+.scroll-view-item{
+  padding-top: 40rpx;
+}
+.left-button{
+  margin: 50rpx 0 0 0;
+  width:100%;
+  height:30rpx;
+  font-size:30rpx;
+  color:white;
+  background-color:transparent;
+}
+/* 文字样式部分 */
+.title{
+  font-size: 45rpx;
+  color:rgb(255, 255, 255);
+}
+.sub-title{
+  margin-top: 20rpx;
+  display: block;
+  color:grey;
+}
+.sub-title-seg{
+  margin-top: 20rpx;
+}
+.sub-title-with-picker{
+  color:grey;
+  display: inline-block;
+}
+picker{
+  display: inline-block;
+}
+.picker{
+  color: #B8B8B8;
+  margin-left: 20rpx;
+  background-color: #6C6C6C; 
+  border-radius: 6rpx;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+/* 图片部分 */
+.photo-frame{
+  margin-top: 30rpx;
+  width:300rpx;
+  height:300rpx;
+  border-radius:10rpx;
+  border:5rpx solid green;
+}
+.photo-frame image{
+  width:300rpx;
+  height:300rpx;
+}
+.multi-photo-frame{
+  padding-bottom: 20rpx;
+  margin-top: 30rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:440rpx;
+  height:480rpx;
+  background-color:#313131;
+  border-radius:20rpx;
+}
+/* 输入框部分 */
+.input-box{
+  margin-top: 30rpx;
+  display: flex;
+}
+.seg{
+  margin-top: 10rpx;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.photo-seg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.seg-cover{
+  width:150rpx;
+  height:150rpx;
+  border:4rpx solid green;
+  border-radius:10rpx;
+  margin:20rpx 0;
+}
+.seg-text{
+  font-size: 30rpx;
+  color: grey;
+}
+.multi-seg-text{
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.seg-input{
+  display: block;
+  width: 180rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  color: white;
+  background-color: grey;
+}
+/* radio部分 */
+.radio-box{
+  margin-top: 30rpx;
+}
+radio-group{
+  color: gray;
+  font-size: 30rpx;
+}
+radio{
+  margin-right: 20rpx;
+}
+.skill-radio{
+  margin-top: 20rpx;
+}
+/* 方法栏部分 */
+.function-bar{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  text-align: center;
+}
+.reset{
+  width: 35%;
+  height: 100rpx;
+  font-family: "微软雅黑";
+  font-size: 45rpx;
+  font-weight: bold;
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f3b2f;
+}
+.submit{
+  width: 65%;
+  height: 100rpx;
+  font-size: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  background-color: #ffc000;
+}
+/* 表格部分 */
+.table {
+  margin-top: 80rpx;
+  border: 2rpx solid grey;
+  width: 420rpx;
+}
+.tr {
+  border: 1rpx solid gray;
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+}
+.td {
+    width:120rpx;
+    height: 60rpx;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 25rpx;
+}
+.th {
+  border: 2rpx solid gray;
+  width: 180rpx;
+  height: 80rpx;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+/* tb_table样式 */
+.rb_tab{
+  margin-top: 30rpx;
+  width: 440rpx;
+  display: table;
+  color:gainsboro; 
+  font-size: 27rpx;
+  text-align: center;
+  border: 2rpx solid white;
+}
+.rb_tr{
+  display: table-row;
+  border: 2rpx solid white;
+}
+.rb_td{
+  display: table-cell;
+  border: 2rpx solid white;
+}
+.rb_td button{
+  color: green;
+  font-size: 30rpx;
+  background-color: transparent;
+}
+/* 特殊布局调整样式 */
+.miaoju{
+  padding-bottom: 240rpx;
+}

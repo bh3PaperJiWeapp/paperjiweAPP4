@@ -6,12 +6,12 @@
     <image src='../image/left_bg.png' class='pageBack'></image>
 
     <!--.js对象通过location对象跳转-->
-    <button>地 图 选 择</button>
-    <button>人 形 选 择</button>
-    <button>妖 精 选 择</button>
-    <button>光 环 选 择</button>
-    <button>装 备 选 择</button>
-    <button>瞄 具 选 择</button>
+    <button bindtap="toMap">地 图 选 择</button>
+    <button bindtap="toPeople">人 形 选 择</button>
+    <button bindtap="toElf">妖 精 选 择</button>
+    <button bindtap="toHalo">光 环 选 择</button>
+    <button bindtap="toZhuangbei">装 备 选 择</button>
+    <button bindtap="toMiaoju">瞄 具 选 择</button>
   </view>
   <view class='long_menu'><!--长页面-->
     <view class='map'>

@@ -1,0 +1,134 @@
+/* pages/submit/submit.wxss */
+
+.container {
+  font-family: "微软雅黑";
+}
+
+.miaoju {
+  font-size: 35rpx;
+  position: relative;
+  color: white;
+  top: 30rpx;
+  left: 100rpx;
+  font-weight: bold;
+}
+
+.mj_name {
+  color: #ffc000;
+  position: relative;
+  top: 100rpx;
+  left: -50rpx;
+  font-weight: bold;
+  font-size: 55rpx;
+}
+
+.mj_xiaoguo {
+  color: gray;
+  position: relative;
+  top: 180rpx;
+  left: -265rpx;
+  font-weight: bold;
+}
+
+.mj_xiaoguo1 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 230rpx;
+  left: -270rpx;
+  font-weight: bold;
+}
+.mj_xiaoguo2 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 280rpx;
+  left: -345rpx;
+  font-weight: bold;
+}
+.mj_xiaoguo3 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 330rpx;
+  left: -345rpx;
+  font-weight: bold;
+}
+.mj_xiaoguo4 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 380rpx;
+  left: -345rpx;
+  font-weight: bold;
+}
+.mj_xiaoguo5 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 430rpx;
+  left: -345rpx;
+  font-weight: bold;
+}
+.mj_xiaoguo6 {
+  font-size: 28rpx;
+  color: gray;
+  position: relative;
+  top: 480rpx;
+  left: -345rpx;
+  font-weight: bold;
+}
+
+.sudden {
+  width: 610rpx;
+  height: 200rpx;
+  color: #ffc000;
+}
+
+.textstyle {
+  align-items: center;
+  color: black;
+}
+
+.input {
+  top: 460rpx;
+  width: 560rpx;
+  height: 120rpx;
+  font-size: 45rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  background-color: #ffc000;
+}
+
+.gfjstyle {
+  width: 252rpx;
+  height: 294rpx;
+  top: 270rpx;
+  left: 240rpx;
+  position: relative;
+}
+
+.confirm_bg {
+  position: absolute;
+  left: 88rpx;
+  top: 200rpx;
+  width: 600rpx;
+  height: 660rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.bottom_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}

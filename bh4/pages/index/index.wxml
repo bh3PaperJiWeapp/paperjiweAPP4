@@ -1,0 +1,299 @@
+<!--index.wxml-->
+<view class="container" style="background-image: url({{mainBgUrl}}); background-size: 100% 100%">
+  <view class='main flex-wrp'>
+    <view class='left flex-item' style="background-image: url({{leftBgUrl}})">
+      <view class='left-button' bindtap='toMap'>地图选择</view>
+      <view class='left-button' bindtap='toPeople'>人形选择</view>
+      <view class='left-button' bindtap='toElf'>妖精选择</view>
+      <view class='left-button' bindtap='toHalo'>光环选择</view>
+      <view class='left-button' bindtap='toEquipment'>装备选择</view>
+      <view class='left-button' bindtap='toMiaoju'>喵具选择</view>
+    </view>
+    <scroll-view class='right flex-item' scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+      <view class='map scroll-view-item' id='map'>
+        <text class='title'>地图选择</text>
+        <!-- 回头再改成box，用新页面 -->
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>战役</text>
+          <picker class="" bindchange="mapInfoPickerChange" range="{{mapInfoArray}}" value="{{index}}">
+            <view class="picker">
+              {{mapInfo}}
+            </view>
+          </picker>
+        </view>
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>关卡</text>
+          <picker class="" bindchange="mapNamePickerChange" range="{{mapFiltedArray}}" value="{{index}}" range-key="name">
+            <view class="picker">
+              {{mapName}}
+            </view>
+          </picker>
+        </view>
+        <view class="table">
+          <view class="tr bg-w">
+            <view class="th">编 号</view>
+            <view class="th">生 命</view>
+            <view class="th">护 甲</view>
+            <view class='th'>闪 避</view>
+          </view>
+          <block wx:for="{{mapNow.enemy}}" wx:key="{{id}}">
+            <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+              <view class="td">{{item.id}}</view>
+              <view class="td">{{item.hp}}</view>
+              <view class="td">{{item.dodge}}</view>
+              <view class='td'>{{item.armor}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item.id}}</view>
+              <view class="td">{{item.hp}}</view>
+              <view class="td">{{item.dodge}}</view>
+              <view class='td'>{{item.armor}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='people scroll-view-item' id='people'>
+        <text class='title'>人形选择</text>
+        <!-- 回头再改成box，用新页面 -->
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>枪种</text>
+          <picker class="" bindchange="peopleTypePickerChange" range="{{peopleTypeArray}}" value="{{index}}">
+            <view class="picker">
+              {{peopleType}}
+            </view>
+          </picker>
+        </view>
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>人形名称</text>
+          <picker class="" bindchange="peopleNamePickerChange" range="{{peopleFiltedArray}}" value="{{index}}" range-key="name">
+            <view class="picker">
+              {{peopleName}}
+            </view>
+          </picker>
+        </view>
+        <view class='photo-frame'>
+          <image class='cover'></image>
+        </view>
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item'>
+            <text class='seg-text'>伤害</text>
+            <input type='digit' bindinput='peoplePowerChange' class='seg-input' value='{{peopleNow.attack}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>命中</text>
+            <input type='digit' bindinput='peoplePrecisionChange' class='seg-input' value='{{peopleNow.piercingArmor}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>暴击</text>
+            <input type='digit' bindinput='peoplePierceChange' class='seg-input' value='{{peopleNow.armourPiercing}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>爆伤</text>
+            <input type='digit' bindinput='peopleCriticalPossibilityChange' class='seg-input' value='{{peopleNow.violentAttack}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>穿甲弹</text>
+            <input type='digit' bindinput='peopleCriticalPowerChange' class='seg-input' value='{{peopleNow.detonatingInjury}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>弹链箱/芯片</text>
+            <input type='digit' bindinput='peopleChainChange' class='seg-input' value='{{peopleNow.belt}}'></input>
+          </view>
+        </view>
+        <text class='sub-title'>技能种类</text>
+        <view class='radio-box'>
+          <radio-group bindchange='skillRadioChange'>
+            <radio wx:for="{{skill}}" wx:key="{{index}}"  class="skill-radio" value="{{item}}" checked="false">
+              {{item}}
+            </radio>
+          </radio-group>
+        </view>
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item' wx:if="{{skillNow == '猎杀冲动' || skillNow == '连珠终结'}}">
+            <text class='seg-text'>命中提升倍率</text>
+            <input type='digit' value='{{skillPrecision}}' bindinput='skillPrecisionChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'  wx:if="{{skillNow == '猎杀冲动'}}">
+            <text class='seg-text'>暴击提升倍率</text>
+            <input type='digit' value='{{skillCriticalPossibility}}' bindinput='skillCriticalPossibilityChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'  wx:if="{{skillNow == '猎杀冲动'}}">
+            <text class='seg-text'>持续时间</text>
+            <input type='digit' value='{{skillTime}}' bindinput='skillTimeChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>好感度</text>
+            <input type='number' value='{{skillLove}}' bindinput='skillLoveChange' class='seg-input'></input>
+          </view>
+        </view>
+      </view>
+      <view class='elf scroll-view-item' id='elf'>
+        <text class='title'>妖精选择</text>
+        <!-- <text class='sub-title'>妖精</text>
+        <text class='sub-title'>妖精名称</text>
+        <view class='photo-frame'>
+          <image class='cover'></image>
+        </view> -->
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item'>
+            <text class='seg-text'>伤害</text>
+            <input type='digit' value='{{elfPower}}' bindinput='elfPowerChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>命中</text>
+            <input type='digit' value='{{elfPrecision}}' bindinput='elfPrecisionChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>暴击</text>
+            <input type='digit' value='{{elfCriticalPossibility}}' bindinput='elfCriticalPossibilityChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>爆伤</text>
+            <input type='digit' value='{{elfCriticalPower}}' bindinput='elfCriticalPowerChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>技能</text>
+            <input type='digit' value='{{elfSkill}}' bindinput='elfSkillChange' class='seg-input'></input>
+          </view>
+        </view>
+      </view>
+      <view class='halo scroll-view-item' id='halo'>
+        <text class='title'>光环选择</text>
+        <!-- <text class='sub-title'>光环</text>
+        <text class='sub-title'>光环名称</text>
+        <view class='photo-frame'>
+          <image class='cover'></image>
+        </view> -->
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item'>
+            <text class='seg-text'>伤害</text>
+            <input type='digit' value='{{haloPower}}' bindinput='haloPowerChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>命中</text>
+            <input type='digit' value='{{haloPrecision}}' bindinput='haloPrecisionChange' class='seg-input'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>暴击</text>
+            <input type='digit' value='{{haloCriticalPossibility}}' bindinput='haloCriticalPossibilityChange' class='seg-input'></input>
+          </view>
+        </view>
+      </view>
+      <view class='equipment scroll-view-item' id='equipment'>
+        <text class='title'>装备选择</text>
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>弹链箱</text>
+          <picker class="" bindchange="chainNamePickerChange" range="{{chainBox}}" value="{{index}}" range-key="name">
+            <view class="picker">
+              {{chainBoxNow.name}}
+            </view>
+          </picker>
+        </view>
+        <view class='photo-frame'>
+          <image class='cover'></image>
+        </view>
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item'>
+            <text class='seg-text'>伤害</text>
+            <input type='digit' bindinput='chainBoxPowerChange' class='seg-input' value='{{chainBoxNow.power}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>命中</text>
+            <input type='digit' bindinput='chainBoxPrecisionChange' class='seg-input' value='{{chainBoxNow.precision}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>暴击</text>
+            <input type='digit' bindinput='chainBoxCriticalPossibilityChange' class='seg-input' value='{{chainBoxNow.criticalPossibility}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>爆伤</text>
+            <input type='digit' bindinput='chainBoxCriticalPowerChange' class='seg-input' value='{{chainBoxNow.criticalPower}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>穿甲弹</text>
+            <input type='digit' bindinput='chainBoxPierceChange' class='seg-input' value='{{chainBoxNow.pierce}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>弹链箱/芯片</text>
+            <input type='digit' bindinput='chainBoxChainChange' class='seg-input' value='{{chainBoxNow.chain}}'></input>
+          </view>
+        </view>
+        <view class='sub-title-seg'>
+          <text class='sub-title-with-picker'>穿甲弹</text>
+          <picker class="" bindchange="armorPiercingBulletNamePickerChange" range="{{armorPiercingBullet}}" value="{{index}}" range-key="name">
+            <view class="picker">
+              {{armorPiercingBulletNow.name}}
+            </view>
+          </picker>
+        </view>
+        <view class='photo-frame'>
+          <image class='cover'></image>
+        </view>
+        <view class='input-box flex-wrp'>
+          <view class='seg flex-item'>
+            <text class='seg-text'>伤害</text>
+            <input type='digit' bindinput='armorPiercingBulletPowerChange' class='seg-input' value='{{armorPiercingBulletNow.power}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>命中</text>
+            <input type='digit' bindinput='armorPiercingBulletPrecisionChange' class='seg-input' value='{{armorPiercingBulletNow.precision}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>穿甲弹</text>
+            <input type='digit' bindinput='armorPiercingBulletPierceChange' class='seg-input' value='{{armorPiercingBulletNow.pierce}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>暴击</text>
+            <input type='digit' bindinput='armorPiercingBulletCriticalPossibilityChange' class='seg-input' value='{{armorPiercingBulletNow.criticalPossibility}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>爆伤</text>
+            <input type='digit' bindinput='armorPiercingBulletCriticalPowerChange' class='seg-input' value='{{armorPiercingBulletNow.criticalPower}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>弹链箱/芯片</text>
+            <input type='digit' bindinput='armorPiercingBulletChainChange' class='seg-input' value='{{armorPiercingBulletNow.chain}}'></input>
+          </view>
+        </view>
+      </view>
+      <view class='miaoju scroll-view-item' id='miaoju'>
+        <text class='title'>喵具选择</text>
+        <view class='radio-box'>
+          <radio-group bindchange='telescopicRadioChange'>
+            <radio value='redPoint' checked>红点</radio>
+            <radio value='holographic'>全息</radio>
+            <radio value='optics'>光学</radio>
+          </radio-group>
+        </view>
+        <view class='multi-photo-frame flex-wrp'>
+          <view class='photo-seg flex-item' wx:for="{{telescopicNow}}" wx:key="index">
+            <image class='seg-cover' bindtap='chooseTelescopic' data-index='{{index}}' data-type='{{telescopicRadioValueNow}}'></image>
+            <text class='multi-seg-text'>{{item.name}}</text>
+          </view>
+        </view>
+        <text class='sub-title'>已选</text>
+        <view class="rb_tab">
+          <view class='rb_tr'></view>
+          <view class='rb_td'>编 号</view>
+          <view class='rb_td'>名 称</view>
+          <view class='rb_td'>定义属性</view>
+          <view class='rb_tr' wx:for="{{telescopicSelected}}" wx:key="index">
+            <view class='rb_td'>{{index}}</view>
+            <view class='rb_td'>{{item.name}}</view>
+            <view class='rb_td'>
+              <navigator url="../attributes/attributes?index={{index}}&name={{item.name}}&power={{item.power}}&precision={{item.precision}}&pierce={{item.pierce}}&criticalPossibility={{item.criticalPossibility}}&criticalPower={{item.criticalPower}}&chain={{item.chain}}" class=""><button>自定义</button></navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='function-bar flex-wrp'>
+    <view class='reset flex-item' bindtap='reset'>
+      <view>撤销</view>
+    </view>
+    <view class='submit flex-item' bindtap='submit'>
+      <view>输入计算</view>
+    </view>
+  </view>
+</view>

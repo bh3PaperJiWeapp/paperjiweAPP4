@@ -1,0 +1,34 @@
+<!--pages/attributes/attributes.wxml-->
+<!--confirm.wxml-->
+<form>
+  <view class='container'>
+    <image src='../../image/gf_bg.png' class='bottom_bg'></image>
+    <view>
+      <text class='name'>{{name}}</text>
+    </view>
+    <view>
+      <text class='shuju'>伤 害</text>
+      <input type='digit' bindinput='powerChange' class='input_new' value='{{power}}'></input>
+      <text class='shuju2'>命 中</text>
+      <input type='digit' bindinput='precisionChange' class='input_new2' value='{{precision}}'></input>
+      <text class='shuju3'>暴 击</text>
+      <input type='digit' bindinput='pierceChange' class='input_new3' value='{{pierce}}'></input>
+      <text class='shuju4'>爆 伤</text>
+      <input type='digit' bindinput='criticalPossibilityChange' class='input_new4' value='{{criticalPossibility}}'></input>
+      <text class='shuju5'>穿 甲 弹</text>
+      <input type='digit' bindinput='criticalPowerChange' class='input_new5' value='{{criticalPower}}'></input>
+      <text class='shuju6'>弹 链 箱/芯 片</text>
+      <input type='digit' bindinput='chainChange' class='input_new6' value='{{chain}}'></input>
+    </view>
+    <view>
+      <image src='../../image/confirm_bg.png' class='confirm_bg'></image>
+      <image src='../../image/gfj.png' class='gfjstyle'></image>
+    </view>
+    <view class='bottom_menu'>
+      <button class='clean'>撤 销</button>
+      <navigator open-type='navigateBack' delta='1'>
+        <button class='input' bindtap="changeInfo">确 认</button>
+      </navigator>
+    </view>
+  </view>
+</form>

@@ -1,0 +1,21 @@
+<!--pages/submit/submit.wxml-->
+<view class='container'>
+  <image src='../../image/gf_bg.png' class='bottom_bg'></image>
+  <view>
+    <image src='../../image/confirm_bg.png' class='confirm_bg'>
+    </image>
+    <view>
+      <text class='miaoju'>当前瞄具选择</text>
+      <text class='mj_name'>{{detail.name}}</text>
+      <text class='mj_xiaoguo'>效果</text>
+      <text class='mj_xiaoguo1'>攻击: {{detail.power}}</text>
+      <text class='mj_xiaoguo2'>命中: {{detail.precision}}</text>
+      <text class='mj_xiaoguo3'>穿甲: {{detail.pierce}}</text>
+      <text class='mj_xiaoguo4'>暴击: {{detail.criticalPossibility}}</text>
+      <text class='mj_xiaoguo5'>爆伤: {{detail.criticalPower}}</text>
+      <text class='mj_xiaoguo6'>弹链: {{detail.chain}}</text>
+    </view>
+  </view>
+  <navigator url='../index/index'><button class='input'>确认</button></navigator>
+  <image src='../../image/gfj.png' class='gfjstyle'></image>
+</view>

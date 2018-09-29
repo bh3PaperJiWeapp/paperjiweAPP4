@@ -2,7 +2,6 @@
   font-family: "微软雅黑"; 
 
 }
-
 .miaoju{
  
   font-size: 35rpx;
@@ -85,5 +84,5 @@ font-weight: bold;
   top: 200rpx;
 width: 600rpx;
 height: 660rpx;
-z-index: -1;
+/* z-index: -1; */
 }
