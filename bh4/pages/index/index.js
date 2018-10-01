@@ -96,6 +96,8 @@ Page({
     mapFiltedArray: [],
     peopleTypeArray: [],
     peopleFiltedArray: [],
+    mapAndPeople: {},
+    equipment: {},
     map: [
       {
         name: "1-2转移伤患",
@@ -198,48 +200,14 @@ Page({
       name: "柯尔特左轮",
       type: "手枪HG",
       cover: "...",
-      attack: 36,
-      piercingArmor: 49,
-      armourPiercing: 10,
-      violentAttack: 20,
-      detonatingInjury: 50,
-      belt: 0
+      power: 1,
+      precision: 2,
+      pierce: 3,
+      criticalPossibility: 4,
+      criticalPower: 5,
+      chain: 6666666
     },
-    people: [
-      {
-        name: "柯尔特左轮",
-        type: "手枪HG",
-        cover: "...",
-        attack: 36,
-        piercingArmor: 49,
-        armourPiercing: 10,
-        violentAttack: 20,
-        detonatingInjury: 50,
-        belt: 0
-      },
-      {
-        name: "柯尔特右轮",
-        type: "机枪",
-        cover: "...",
-        attack: 36,
-        piercingArmor: 4,
-        armourPiercing: 7,
-        violentAttack: 2,
-        detonatingInjury: 5,
-        belt: 45
-      },
-      {
-        name: "柯尔特",
-        type: "手枪HG",
-        cover: "...",
-        attack: 6,
-        piercingArmor: 9,
-        armourPiercing: 0,
-        violentAttack: 0,
-        detonatingInjury: 0,
-        belt: 0
-      }
-    ],
+    people: [],
     chainBox: [
       {
         name: "IOP大容量弹链箱",
@@ -495,12 +463,12 @@ Page({
       url: 'http://www.gamepaper.cn/api/GfSelectSight/GfSelectSight',
       data: {
         mapId: 1,
-        dollPower: this.data.peopleNow.attack,
-        dollPrecision: this.data.peopleNow.piercingArmor,
-        dollPierce: this.data.peopleNow.armourPiercing,
-        dollCriticalPossibility: this.data.peopleNow.violentAttack,
-        dollCriticalPower: this.data.peopleNow.detonatingInjury,
-        dollChain: this.data.peopleNow.belt,
+        dollPower: this.data.peopleNow.power,
+        dollPrecision: this.data.peopleNow.precision,
+        dollPierce: this.data.peopleNow.pierce,
+        dollCriticalPossibility: this.data.peopleNow.criticalPossibility,
+        dollCriticalPower: this.data.peopleNow.criticalPower,
+        dollChain: this.data.peopleNow.chain,
         skillType: this.data.skillNow,
         skillParameter1: this.data.skillPrecision,
         skillParameter2: this.data.skillCriticalPossibility,
@@ -508,16 +476,16 @@ Page({
         mood: this.data.skillLove,
         fairyPower: this.data.elfPower,
         fairyPrecision: this.data.elfPrecision,
-        fairyPierce: this.data.elfCriticalPossibility,
-        fairyCriticalPossibility: this.data.elfCriticalPower,
-        fairyCriticalPower: this.data.elfSkill,
-        fairyChain: 0,
+        fairyCriticalPossibility: this.data.elfCriticalPossibility,
+        fairyCriticalPower: this.data.elfCriticalPower,
+        fairySkill: this.data.elfSkill,
+        // fairyChain: 0,
         haloPower: this.data.haloPower,
         haloPrecision: this.data.haloPrecision,
-        haloPierce: 0,
+        // haloPierce: 0,
         haloCriticalPossibility: this.data.haloCriticalPossibility,
-        haloCriticalPower: 0,
-        haloChain: 0,
+        // haloCriticalPower: 0,
+        // haloChain: 0,
         equ1Power: this.data.chainBoxNow.power,
         equ1Precision: this.data.chainBoxNow.precision,
         equ1Pierce: this.data.chainBoxNow.pierce,
@@ -600,57 +568,101 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onLoad: function (options) {
+    let that = this
     console.log("onLoad")
     // 初期加载过程
-    //@
-    //@@
-    //@@@
-    //@@@@
-    // 设置地图列表
-    let temp = []
-    console.log(this.data.map)
-    this.data.map.forEach(element => {
-      if (temp.indexOf(element.info) < 0) {
-        temp.push(element.info)
+    wx.request({
+      url: 'http://www.gamepaper.cn/Wiki/GirlFront/MapAndPeople',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        // console.log()
+        that.setData({
+          mapAndPeople: JSON.parse(res.data)
+        })
+        that.setData({
+          map: that.data.mapAndPeople.map,
+          people: that.data.mapAndPeople.people,
+        })
+        // 设置地图列表
+        let temp = []
+        console.log(that.data.map)
+        that.data.map.forEach(element => {
+          if (temp.indexOf(element.info) < 0) {
+            temp.push(element.info)
+          }
+        })
+        that.setData({
+          mapInfoArray: temp
+        })
+        // 设置关卡列表
+        temp = []
+        that.data.map.forEach(element => {
+          if (element.info == that.data.mapInfo) {
+            temp.push(element)
+          }
+        })
+        that.setData({
+          mapFiltedArray: temp
+        })
+        // 设置人型分类列表
+        temp = []
+        that.data.people.forEach(element => {
+          if (temp.indexOf(element.type) < 0) {
+            temp.push(element.type)
+          }
+        })
+        that.setData({
+          peopleTypeArray: temp
+        })
+        // 设置人形筛选列表
+        temp = []
+        that.data.people.forEach(element => {
+          if (element.type == that.data.peopleType) {
+            temp.push(element)
+          }
+        })
+        that.setData({
+          peopleFiltedArray: temp
+        })
+      },
+      fail: function(res) {
+        console.log(res.data)
+        wx.showToast({
+          title: "网络错误，无法获取数据",
+          icon: 'none'
+        })
       }
     })
-    this.setData({
-      mapInfoArray: temp
-    })
-    // 设置关卡列表
-    temp = []
-    this.data.map.forEach(element => {
-      if (element.info == this.data.mapInfo) {
-        temp.push(element)
+    wx.request({
+      url: 'http://www.gamepaper.cn/Wiki/GirlFront/Equipment',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        that.setData({
+          equipment: JSON.parse(res.data)
+        })
+        that.setData({
+          chainBox: that.data.equipment.chainBox,
+          armorPiercingBullet: that.data.equipment.armorPiercingBullet,
+          telescopic: that.data.equipment.telescopic
+        })
+        // 设置瞄准镜
+        that.setData({
+          telescopicNow: that.data.telescopic.redPoint
+        })
+      },
+      fail: function(res) {
+        console.log(res.data)
+        wx.showToast({
+          title: "网络错误，无法获取数据",
+          icon: 'none'
+        })
       }
     })
-    this.setData({
-      mapFiltedArray: temp
-    })
-    // 设置人型分类列表
-    temp = []
-    this.data.people.forEach(element => {
-      if (temp.indexOf(element.type) < 0) {
-        temp.push(element.type)
-      }
-    })
-    this.setData({
-      peopleTypeArray: temp
-    })
-    // 设置人形筛选列表
-    temp = []
-    this.data.people.forEach(element => {
-      if (element.type == this.data.peopleType) {
-        temp.push(element)
-      }
-    })
-    this.setData({
-      peopleFiltedArray: temp
-    })
-    // 设置瞄准镜
-    this.setData({
-      telescopicNow: this.data.telescopic.redPoint
-    })
+    
   },
   onShow: function () {
     
@@ -778,42 +790,42 @@ Page({
   // 按键双向绑定部分
   peoplePowerChange: function(e) {
     let temp = this.data.peopleNow
-    temp.attack = e.detail.value
+    temp.power = e.detail.value
     this.setData({
       peopleNow: temp
     })
   },
   peoplePrecisionChange: function(e) {
     let temp = this.data.peopleNow
-    temp.piercingArmor = e.detail.value
+    temp.precision = e.detail.value
     this.setData({
       peopleNow: temp
     })
   },
   peoplePierceChange: function(e) {
     let temp = this.data.peopleNow
-    temp.armourPiercing = e.detail.value
+    temp.pierce = e.detail.value
     this.setData({
       peopleNow: temp
     })
   },
   peopleCriticalPossibilityChange: function(e) {
     let temp = this.data.peopleNow
-    temp.violentAttack = e.detail.value
+    temp.criticalPossibility = e.detail.value
     this.setData({
       peopleNow: temp
     })
   },
   peopleCriticalPowerChange: function(e) {
     let temp = this.data.peopleNow
-    temp.detonatingInjury = e.detail.value
+    temp.criticalPower = e.detail.value
     this.setData({
       peopleNow: temp
     })
   },
   peopleChainChange: function(e) {
     let temp = this.data.peopleNow
-    temp.belt = e.detail.value
+    temp.chain = e.detail.value
     this.setData({
       peopleNow: temp
     })

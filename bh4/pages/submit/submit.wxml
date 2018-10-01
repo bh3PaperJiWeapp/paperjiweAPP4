@@ -13,7 +13,7 @@
       <text class='mj_xiaoguo4'>暴击: {{detail.criticalPossibility}}</text>
       <text class='mj_xiaoguo5'>爆伤: {{detail.criticalPower}}</text>
       <text class='mj_xiaoguo6'>弹链: {{detail.chain}}</text>
-        <navigator url='../index/index'><button class='input'>确认</button></navigator>
+        <navigator  open-type='navigateBack' delta='1'><button class='input'>确认</button></navigator>
     </view>
   </view>
 

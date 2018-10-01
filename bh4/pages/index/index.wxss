@@ -82,7 +82,6 @@ picker{
   justify-content: center;
   align-items: center;
   width:440rpx;
-  height:480rpx;
   background-color:#313131;
   border-radius:20rpx;
 }

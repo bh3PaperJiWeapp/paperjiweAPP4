@@ -77,27 +77,27 @@
         <view class='input-box flex-wrp'>
           <view class='seg flex-item'>
             <text class='seg-text'>伤害</text>
-            <input type='digit' bindinput='peoplePowerChange' class='seg-input' value='{{peopleNow.attack}}'></input>
+            <input type='digit' bindinput='peoplePowerChange' class='seg-input' value='{{peopleNow.power}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>命中</text>
-            <input type='digit' bindinput='peoplePrecisionChange' class='seg-input' value='{{peopleNow.piercingArmor}}'></input>
+            <input type='digit' bindinput='peoplePrecisionChange' class='seg-input' value='{{peopleNow.precision}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>暴击</text>
-            <input type='digit' bindinput='peoplePierceChange' class='seg-input' value='{{peopleNow.armourPiercing}}'></input>
+            <input type='digit' bindinput='peoplePierceChange' class='seg-input' value='{{peopleNow.pierce}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>爆伤</text>
-            <input type='digit' bindinput='peopleCriticalPossibilityChange' class='seg-input' value='{{peopleNow.violentAttack}}'></input>
+            <input type='digit' bindinput='peopleCriticalPossibilityChange' class='seg-input' value='{{peopleNow.criticalPossibility}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>穿甲</text>
-            <input type='digit' bindinput='peopleCriticalPowerChange' class='seg-input' value='{{peopleNow.detonatingInjury}}'></input>
+            <input type='digit' bindinput='peopleCriticalPowerChange' class='seg-input' value='{{peopleNow.criticalPower}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>弹链</text>
-            <input type='digit' bindinput='peopleChainChange' class='seg-input' value='{{peopleNow.belt}}'></input>
+            <input type='digit' bindinput='peopleChainChange' class='seg-input' value='{{peopleNow.chain}}'></input>
           </view>
         </view>
         <text class='sub-title'>技能种类</text>
