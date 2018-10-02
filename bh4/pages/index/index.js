@@ -448,13 +448,9 @@ Page({
         fairyCriticalPossibility: this.data.elfCriticalPossibility,
         fairyCriticalPower: this.data.elfCriticalPower,
         fairySkill: this.data.elfSkill,
-        // fairyChain: 0,
         haloPower: this.data.haloPower,
         haloPrecision: this.data.haloPrecision,
-        // haloPierce: 0,
         haloCriticalPossibility: this.data.haloCriticalPossibility,
-        // haloCriticalPower: 0,
-        // haloChain: 0,
         equ1Power: this.data.chainBoxNow.power,
         equ1Precision: this.data.chainBoxNow.precision,
         equ1Pierce: this.data.chainBoxNow.pierce,
@@ -580,14 +576,12 @@ Page({
           mapName: that.data.mapFiltedArray[0].name
         })
         // 设置人型分类列表
-        temp = []
-        that.data.people.forEach(element => {
-          if (temp.indexOf(element.type) < 0) {
-            temp.push(element.type)
-          }
-        })
+        temp = ["机枪 MG"]
         that.setData({
           peopleTypeArray: temp
+        })
+        that.setData({
+          peopleType: that.data.peopleTypeArray[0]
         })
         // 设置人形筛选列表
         temp = []
@@ -598,6 +592,9 @@ Page({
         })
         that.setData({
           peopleFiltedArray: temp
+        })
+        that.setData({
+          peopleName: that.data.peopleFiltedArray[0].name
         })
       },
       fail: function(res) {

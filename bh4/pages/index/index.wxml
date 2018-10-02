@@ -85,15 +85,15 @@
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>暴击</text>
-            <input type='digit' bindinput='peoplePierceChange' class='seg-input' value='{{peopleNow.pierce}}'></input>
-          </view>
-          <view class='seg flex-item'>
-            <text class='seg-text'>爆伤</text>
             <input type='digit' bindinput='peopleCriticalPossibilityChange' class='seg-input' value='{{peopleNow.criticalPossibility}}'></input>
           </view>
           <view class='seg flex-item'>
-            <text class='seg-text'>穿甲</text>
+            <text class='seg-text'>爆伤</text>
             <input type='digit' bindinput='peopleCriticalPowerChange' class='seg-input' value='{{peopleNow.criticalPower}}'></input>
+          </view>
+          <view class='seg flex-item'>
+            <text class='seg-text'>穿甲</text>
+            <input type='digit' bindinput='peoplePierceChange' class='seg-input' value='{{peopleNow.pierce}}'></input>
           </view>
           <view class='seg flex-item'>
             <text class='seg-text'>弹链</text>
