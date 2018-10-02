@@ -6,7 +6,7 @@ Page({
   data: {
     toView: "map",
     mapInfo: "第一章",
-    mapName: "1-2转移伤患",
+    mapName: "1-1",
     peopleType: "手枪HG",
     peopleName: "柯尔特左轮",
     skillPrecision: 1,
@@ -208,38 +208,7 @@ Page({
       chain: 6666666
     },
     people: [],
-    chainBox: [
-      {
-        name: "IOP大容量弹链箱",
-        cover: "...",
-        power: 1,
-        precision: 2,
-        pierce: 3,
-        criticalPossibility: 4,
-        criticalPower: 5,
-        chain: 6
-      },
-      {
-        name: "IO",
-        cover: "...",
-        power: 1,
-        precision: 2333333,
-        pierce: 3,
-        criticalPossibility: 4,
-        criticalPower: 5,
-        chain: 6
-      },
-      {
-        name: "大容量弹链箱",
-        cover: "...",
-        power: 1,
-        precision: 2,
-        pierce: 3,
-        criticalPossibility: 4,
-        criticalPower: 5,
-        chain: 6666666
-      }
-    ],
+    chainBox: [],
     armorPiercingBullet: [
       {
         name: "穿甲弹1",
@@ -587,7 +556,7 @@ Page({
         })
         // 设置地图列表
         let temp = []
-        console.log(that.data.map)
+        // console.log(that.data.map)
         that.data.map.forEach(element => {
           if (temp.indexOf(element.info) < 0) {
             temp.push(element.info)
@@ -605,6 +574,10 @@ Page({
         })
         that.setData({
           mapFiltedArray: temp
+        })
+        that.setData({
+          mapNow: that.data.mapFiltedArray[0],
+          mapName: that.data.mapFiltedArray[0].name
         })
         // 设置人型分类列表
         temp = []
@@ -648,6 +621,14 @@ Page({
           chainBox: that.data.equipment.chainBox,
           armorPiercingBullet: that.data.equipment.armorPiercingBullet,
           telescopic: that.data.equipment.telescopic
+        })
+        // 设置弹链箱
+        that.setData({
+          chainBoxNow: that.data.chainBox[0]
+        })
+        // 设置穿甲弹
+        that.setData({
+          armorPiercingBulletNow: that.data.armorPiercingBullet[0]
         })
         // 设置瞄准镜
         that.setData({
