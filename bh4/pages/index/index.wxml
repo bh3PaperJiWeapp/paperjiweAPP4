@@ -72,7 +72,7 @@
           </picker>
         </view>
         <view class='photo-frame'>
-          <image class='cover'></image>
+          <image class='cover' src="https://gamepaper.cn{{peopleNow.cover}}"></image>
         </view>
         <view class='input-box flex-wrp'>
           <view class='seg flex-item'>
@@ -190,7 +190,7 @@
           </picker>
         </view>
         <view class='photo-frame'>
-          <image class='cover'></image>
+          <image class='cover' src="https://gamepaper.cn{{chainBoxNow.cover}}"></image>
         </view>
         <view class='input-box flex-wrp'>
           <view class='seg flex-item'>
@@ -227,7 +227,7 @@
           </picker>
         </view>
         <view class='photo-frame'>
-          <image class='cover'></image>
+          <image class='cover' src="https://gamepaper.cn{{armorPiercingBulletNow.cover}}"></image>
         </view>
         <view class='input-box flex-wrp'>
           <view class='seg flex-item'>
@@ -267,7 +267,7 @@
         </view>
         <view class='multi-photo-frame flex-wrp'>
           <view class='photo-seg flex-item' wx:for="{{telescopicNow}}" wx:key="index">
-            <image class='seg-cover' bindtap='chooseTelescopic' data-index='{{index}}' data-type='{{telescopicRadioValueNow}}'></image>
+            <image class='seg-cover' src="https://gamepaper.cn{{item.cover}}" bindtap='chooseTelescopic' data-index='{{index}}' data-type='{{telescopicRadioValueNow}}'></image>
             <text class='multi-seg-text'>{{item.name}}</text>
           </view>
         </view>

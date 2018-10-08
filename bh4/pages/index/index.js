@@ -25,7 +25,7 @@ Page({
     skill: ["猎杀冲动", "连珠终结", "其他"],
     chainBoxNow: {
       name: "IOP大容量弹链箱",
-      cover: "...",
+      cover: "/Picture/GfEquipment/38/Pic.png",
       power: 1,
       precision: 2,
       pierce: 3,
@@ -35,7 +35,7 @@ Page({
     },
     armorPiercingBulletNow: {
       name: "M61穿甲弹",
-      cover: "...",
+      cover: "/Picture/GfEquipment/38/Pic.png",
       power: 1,
       precision: 2,
       pierce: 3,
@@ -170,7 +170,7 @@ Page({
     peopleNow: {
       name: "柯尔特左轮",
       type: "手枪HG",
-      cover: "...",
+      cover: "/Picture/GfEquipment/38/Pic.png",
       power: 1,
       precision: 2,
       pierce: 3,
@@ -183,7 +183,7 @@ Page({
     armorPiercingBullet: [
       {
         name: "穿甲弹1",
-        cover: "...",
+        cover: "/Picture/GfEquipment/38/Pic.png",
         power: 1,
         precision: 2,
         pierce: 3,
@@ -196,7 +196,7 @@ Page({
       redPoint: [
         {
           name: "红点1",
-          cover: "...",
+          cover: "/Picture/GfEquipment/38/Pic.png",
           power: 1,
           precision: 2,
           pierce: 3,
@@ -208,7 +208,7 @@ Page({
       holographic: [
         {
           name: "全息1",
-          cover: "...",
+          cover: "/Picture/GfEquipment/38/Pic.png",
           power: 100,
           precision: 2,
           pierce: 3,
@@ -220,7 +220,7 @@ Page({
       optics: [
         {
           name: "光学1",
-          cover: "...",
+          cover: "/Picture/GfEquipment/38/Pic.png",
           power: 1,
           precision: 2,
           pierce: 3,
