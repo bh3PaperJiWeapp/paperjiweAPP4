@@ -136,7 +136,7 @@
         </view> -->
         <view class='input-box flex-wrp'>
           <view class='seg flex-item'>
-            <text class='seg-text'>伤害</text>
+            <text class='seg-text'>伤害%</text>
             <input type='digit' value='{{elfPower}}' bindinput='elfPowerChange' class='seg-input'></input>
           </view>
           <view class='seg flex-item'>

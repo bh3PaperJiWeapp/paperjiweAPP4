@@ -13,14 +13,14 @@ Page({
     skillCriticalPossibility: 2,
     skillTime: 3,
     skillLove: 4,
-    elfPower: 1,
-    elfPrecision: 2,
-    elfCriticalPossibility: 3,
-    elfCriticalPower: 4,
-    elfSkill: 5,
-    haloPower: 1,
-    haloPrecision: 2,
-    haloCriticalPossibility: 3,
+    elfPower: 0,
+    elfPrecision: 0,
+    elfCriticalPossibility: 0,
+    elfCriticalPower: 0,
+    elfSkill: 0,
+    haloPower: 0,
+    haloPrecision: 0,
+    haloCriticalPossibility: 0,
     skillNow: "其他",
     skill: ["猎杀冲动", "连珠终结", "其他"],
     chainBoxNow: {
@@ -51,6 +51,7 @@ Page({
     mainBgUrl: "https://i.loli.net/2018/09/27/5bacdfffeea64.png",
     leftBgUrl: "https://i.loli.net/2018/09/27/5bacdff80a2b9.png",
     mapNow: {
+      id: 0,
       name: "1-2转移伤患",
       info: "第一章",
       enemy: [
@@ -59,36 +60,6 @@ Page({
           hp: 62,
           dodge: 0,
           armor: 0
-        },
-        {
-          id: 2,
-          hp: 45,
-          dodge: 3,
-          armor: 6
-        },
-        {
-          id: 3,
-          hp: 62,
-          dodge: 5,
-          armor: 7
-        },
-        {
-          id: 4,
-          hp: 94,
-          dodge: 42,
-          armor: 3
-        },
-        {
-          id: 5,
-          hp: 82,
-          dodge: 3,
-          armor: 87
-        },
-        {
-          id: 6,
-          hp: 22,
-          dodge: 93,
-          armor: 83
         },
       ]
     },
@@ -220,26 +191,6 @@ Page({
         criticalPower: 5,
         chain: 6
       },
-      {
-        name: "穿甲弹2",
-        cover: "...",
-        power: 1,
-        precision: 2333333,
-        pierce: 3,
-        criticalPossibility: 4,
-        criticalPower: 5,
-        chain: 6
-      },
-      {
-        name: "穿甲弹3",
-        cover: "...",
-        power: 1,
-        precision: 2,
-        pierce: 3,
-        criticalPossibility: 4,
-        criticalPower: 5,
-        chain: 6666666
-      }
     ],
     telescopic: {
       redPoint: [
@@ -253,36 +204,6 @@ Page({
           criticalPower: 5,
           chain: 6666666
         },
-        {
-          name: "红点2",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "红点3",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "红点4",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        }
       ],
       holographic: [
         {
@@ -295,36 +216,6 @@ Page({
           criticalPower: 500,
           chain: 6666666
         },
-        {
-          name: "全息2",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "全息3",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "全息4",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        }
       ],
       optics: [
         {
@@ -337,36 +228,6 @@ Page({
           criticalPower: 5,
           chain: 6666666
         },
-        {
-          name: "光学2",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "光学3",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        },
-        {
-          name: "光学4",
-          cover: "...",
-          power: 1,
-          precision: 2,
-          pierce: 3,
-          criticalPossibility: 4,
-          criticalPower: 5,
-          chain: 6666666
-        }
       ]
     }
   },
@@ -429,9 +290,9 @@ Page({
       telescopicSelected123: tmp
     })
     wx.request({
-      url: 'http://www.gamepaper.cn/api/GfSelectSight/GfSelectSight',
+      url: app.globalData.url + '/api/GfSelectSight/GfSelectSight',
       data: {
-        mapId: 1,
+        mapId: this.data.mapNow.id,
         dollPower: this.data.peopleNow.power,
         dollPrecision: this.data.peopleNow.precision,
         dollPierce: this.data.peopleNow.pierce,
@@ -537,7 +398,7 @@ Page({
     console.log("onLoad")
     // 初期加载过程
     wx.request({
-      url: 'http://www.gamepaper.cn/Wiki/GirlFront/MapAndPeople',
+      url: app.globalData.url + '/Wiki/GirlFront/MapAndPeople',
       header: {
         'Content-Type': 'application/json'
       },
@@ -594,7 +455,8 @@ Page({
           peopleFiltedArray: temp
         })
         that.setData({
-          peopleName: that.data.peopleFiltedArray[0].name
+          peopleName: that.data.peopleFiltedArray[0].name,
+          peopleNow: that.data.peopleFiltedArray[0]
         })
       },
       fail: function(res) {
@@ -606,7 +468,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://www.gamepaper.cn/Wiki/GirlFront/Equipment',
+      url: app.globalData.url + '/Wiki/GirlFront/Equipment',
       header: {
         'Content-Type': 'application/json'
       },

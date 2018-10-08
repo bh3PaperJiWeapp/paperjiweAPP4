@@ -15,7 +15,7 @@ Page({
       criticalPossibility: 0,
       criticalPower: 0,
       chain: 0
-    }
+    } 
   },
 
   /**
