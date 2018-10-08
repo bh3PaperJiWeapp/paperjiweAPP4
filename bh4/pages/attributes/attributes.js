@@ -97,12 +97,12 @@ Page({
   },
   criticalPossibilityChange: function(e) {
     this.setData({
-      critical: e.detail.value
+      criticalPossibility: e.detail.value
     })
   },
   criticalPowerChange: function(e) {
     this.setData({
-      critical: e.detail.value
+      criticalPower: e.detail.value
     })
   },
   chainChange: function(e) {
