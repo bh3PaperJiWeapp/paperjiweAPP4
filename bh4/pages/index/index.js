@@ -9,10 +9,10 @@ Page({
     mapName: "1-1",
     peopleType: "手枪HG",
     peopleName: "柯尔特左轮",
-    skillPrecision: 1,
-    skillCriticalPossibility: 2,
-    skillTime: 3,
-    skillLove: 4,
+    skillPrecision: 0,
+    skillCriticalPossibility: 20,
+    skillTime: 0,
+    skillLove: 0,
     elfPower: 0,
     elfPrecision: 0,
     elfCriticalPossibility: 0,
@@ -357,9 +357,19 @@ Page({
             fail: ()=>{},
             complete: ()=>{}
           });
+        } else if (res.data.status == 1) {
+          let str=JSON.stringify(that.data.telescopicSelected123[0])
+          wx.navigateTo({
+            url: '../submit/submit?jsonStr=' + str,
+            success: (res)=>{
+              console.log(res)
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+          });
         } else {
           wx.showToast({
-            title: '至少选择一个喵具',
+            title: '未知错误',
             icon: 'none'
           })
         }
@@ -627,7 +637,8 @@ Page({
   onUnload: function () {
     console.log("onUpload")
   },
-  // 按键双向绑定部分
+  
+  // 以下均为按键双向绑定部分
   peoplePowerChange: function(e) {
     let temp = this.data.peopleNow
     temp.power = e.detail.value

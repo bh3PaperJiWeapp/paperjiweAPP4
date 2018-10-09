@@ -11,11 +11,11 @@
       <input type='digit' bindinput='powerChange' class='input_new' value='{{power}}'></input>
       <text class='shuju2'>命 中</text>
       <input type='digit' bindinput='precisionChange' class='input_new2' value='{{precision}}'></input>
-      <text class='shuju3'>暴 击</text>
+      <text class='shuju3'>穿 甲</text>
       <input type='digit' bindinput='pierceChange' class='input_new3' value='{{pierce}}'></input>
-      <text class='shuju4'>爆 伤</text>
+      <text class='shuju4'>暴 击</text>
       <input type='digit' bindinput='criticalPossibilityChange' class='input_new4' value='{{criticalPossibility}}'></input>
-      <text class='shuju5'>穿 甲 </text>
+      <text class='shuju5'>爆 伤</text>
       <input type='digit' bindinput='criticalPowerChange' class='input_new5' value='{{criticalPower}}'></input>
       <text class='shuju6'>弹 链</text>
       <input type='digit' bindinput='chainChange' class='input_new6' value='{{chain}}'></input>
