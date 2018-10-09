@@ -369,7 +369,7 @@ Page({
           });
         } else {
           wx.showToast({
-            title: '未知错误',
+            title: '有属性未填写',
             icon: 'none'
           })
         }
@@ -637,7 +637,7 @@ Page({
   onUnload: function () {
     console.log("onUpload")
   },
-  
+
   // 以下均为按键双向绑定部分
   peoplePowerChange: function(e) {
     let temp = this.data.peopleNow

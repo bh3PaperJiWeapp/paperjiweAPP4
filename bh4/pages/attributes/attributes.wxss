@@ -20,6 +20,7 @@
   position: relative;
   top: 100rpx;
   left: -100rpx;
+  z-index: 5;
 }
 
 .shuju2 {
@@ -28,6 +29,7 @@
   position: relative;
   top: -10rpx;
   left: 150rpx;
+  z-index: 5;
 }
 
 .shuju3 {
@@ -36,6 +38,7 @@
   position: relative;
   top: 0rpx;
   left: -100rpx;
+  z-index: 5;
 }
 
 .shuju4 {
@@ -44,6 +47,7 @@
   position: relative;
   top: -110rpx;
   left: 150rpx;
+  z-index: 5;
 }
 
 .shuju5 {
@@ -52,6 +56,7 @@
   position: relative;
   top: -100rpx;
   left: -100rpx;
+  z-index: 5;
 }
 
 .shuju6 {
@@ -60,6 +65,7 @@
   position: relative;
   top: -210rpx;
   left: 150rpx;
+  z-index: 5;
 }
 
 .input_new {
@@ -69,8 +75,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .input_new2 {
@@ -80,8 +87,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .input_new3 {
@@ -91,8 +99,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .input_new4 {
@@ -102,8 +111,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .input_new5 {
@@ -113,8 +123,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .input_new6 {
@@ -124,8 +135,9 @@
   width: 200rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
+  z-index: 5;
 }
 
 .confirm_bg {
@@ -156,12 +168,14 @@
   float: left;
   left: 0rpx;
   bottom: 0rpx;
+  border-radius: 0;
 }
 
 .input {
   width: 500rpx;
   height: 120rpx;
   font-size: 45rpx;
+  border-radius: 0;
   font-family: "huxiaobo-gdh";
   font-weight: bold;
   background-color: #ffc000;
@@ -178,7 +192,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 200rpx 0;
-  box-sizing: border-box;
 }
 
 .pageBack {

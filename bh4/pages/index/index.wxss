@@ -27,12 +27,16 @@ page{
   padding-top: 40rpx;
 }
 .left-button{
-  margin: 50rpx 0 0 0;
   width:100%;
-  height:30rpx;
+  height:75rpx;
   font-size:30rpx;
+  line-height: 75rpx;
   color:white;
-  background-color:transparent;
+  background-color: transparent;
+}
+.left-button:active{
+  color:black;
+  background-color: #ffc000;
 }
 /* 文字样式部分 */
 .title{
@@ -42,13 +46,13 @@ page{
 .sub-title{
   margin-top: 20rpx;
   display: block;
-  color:grey;
+  color:#929292;
 }
 .sub-title-seg{
   margin-top: 20rpx;
 }
 .sub-title-with-picker{
-  color:grey;
+  color:#929292;
   display: inline-block;
 }
 picker{
@@ -57,7 +61,7 @@ picker{
 .picker{
   color: #B8B8B8;
   margin-left: 20rpx;
-  background-color: #6C6C6C; 
+  background-color: #3B3B3B; 
   border-radius: 6rpx;
   padding: 0 20rpx;
   font-size: 30rpx;
@@ -87,7 +91,7 @@ picker{
 }
 /* 输入框部分 */
 .input-box{
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   display: flex;
 }
 .seg{
@@ -116,7 +120,7 @@ picker{
 }
 .seg-text{
   font-size: 30rpx;
-  color: grey;
+  color: #929292;
 }
 .multi-seg-text{
   display: block;
@@ -130,8 +134,8 @@ picker{
   width: 180rpx;
   height: 60rpx;
   border-radius: 7rpx;
-  color: white;
-  background-color: grey;
+  color: #B8B8B8;
+  background-color: #3B3B3B;
 }
 /* radio部分 */
 .radio-box{
@@ -144,8 +148,11 @@ radio-group{
 radio{
   margin-right: 20rpx;
 }
+.skill-box{
+  margin-top: 0rpx;
+}
 .skill-radio{
-  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 /* 方法栏部分 */
 .function-bar{
@@ -161,7 +168,6 @@ radio{
 .reset{
   width: 35%;
   height: 100rpx;
-
   font-size: 55rpx;
   font-weight: bold;
   color: white; 
@@ -171,6 +177,9 @@ radio{
   background-color: #3f3b2f;
   font-family: huxiaobo-gdh;
 }
+.reset:active{
+  background-color: #5f5c54;
+}
 .submit{
   width: 65%;
   height: 100rpx;
@@ -178,14 +187,16 @@ radio{
   display: flex;
   align-items: center;
   justify-content: center;
-  
   font-weight: bold;
   background-color: #ffc000;
-   font-family: huxiaobo-gdh;
+  font-family: huxiaobo-gdh;
+}
+.submit:active{
+  background-color: #dbac1d;
 }
 /* 表格部分 */
 .table {
-  margin-top: 80rpx;
+  margin-top: 40rpx;
   border: 2rpx solid grey;
   width: 420rpx;
 }
@@ -242,4 +253,10 @@ radio{
 /* 特殊布局调整样式 */
 .miaoju{
   padding-bottom: 240rpx;
+}
+.chain-box {
+  margin-bottom: 40rpx;
+}
+.people-box{
+  margin-bottom: 40rpx;
 }

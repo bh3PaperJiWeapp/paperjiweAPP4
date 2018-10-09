@@ -1,93 +1,88 @@
 /* pages/submit/submit.wxss */
-
-
+.container {
+  height: 100%;
+  display: flex;
+  padding: 200rpx 0;
+}
 
 .miaoju {
   font-size: 50rpx;
- display: flex;
+  display: flex;
   color: white;
   margin-top: 40rpx;
   margin-left: 150rpx;
   font-weight: bold;
-  z-index: 10;
   font-family: "huxiaobo-gdh";
 }
 
 .mj_name {
   color: #ffc000;
- display: flex;
-  margin-top: 20rpx;
+  display: flex;
   margin-left: 160rpx;
   font-weight: bold;
   font-size: 55rpx;
 }
 
 .mj_xiaoguo {
-   
-  
   color: gray;
- display: flex;
-  margin-top: 30rpx;
+  display: flex;
   margin-left: 170rpx;
   font-weight: bold;
 }
 
 .mj_xiaoguo1 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
+
 .mj_xiaoguo2 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
   margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
+
 .mj_xiaoguo3 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
   margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
+
 .mj_xiaoguo4 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
   margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
+
 .mj_xiaoguo5 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
   margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
+
 .mj_xiaoguo6 {
-   display: flex;
+  display: flex;
   font-size: 28rpx;
   color: gray;
- 
   margin-top: 10rpx;
   margin-left: 200rpx;
   font-weight: bold;
 }
-
-
 
 .textstyle {
   align-items: center;
@@ -95,27 +90,22 @@
 }
 
 .input {
- 
-  margin-top: 35rpx;
-  margin-left: 95rpx;
-  width: 580rpx;
+  margin-top: 15rpx;
+  margin-left: 97rpx;
+  width: 560rpx;
   height: 100rpx;
   font-size: 45rpx;
   text-align: center;
   font-family: "huxiaobo-gdh";
   font-weight: bold;
   background-color: #ffc000;
-
 }
-
 .gfjstyle {
-  display: flex;
-  
+  position: relative;
   width: 252rpx;
   height: 294rpx;
   margin-top: -200rpx;
   margin-left: 500rpx;
- z-index: 3;
 }
 
 .confirm_bg {
@@ -124,16 +114,6 @@
   top: 200rpx;
   width: 600rpx;
   height: 660rpx;
-  z-index: -6;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  
-
-  padding: 200rpx 0;
-  box-sizing: border-box;
 }
 
 .bottom_bg {
@@ -141,5 +121,7 @@
   height: 100%;
   position: fixed;
   top: 0;
+}
+.bg-box{
   z-index: -1000;
 }

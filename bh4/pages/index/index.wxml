@@ -74,7 +74,7 @@
         <view class='photo-frame'>
           <image class='cover' src="https://gamepaper.cn{{peopleNow.cover}}"></image>
         </view>
-        <view class='input-box flex-wrp'>
+        <view class='input-box flex-wrp people-box'>
           <view class='seg flex-item'>
             <text class='seg-text'>伤害</text>
             <input type='digit' bindinput='peoplePowerChange' class='seg-input' value='{{peopleNow.power}}'></input>
@@ -108,7 +108,7 @@
             </radio>
           </radio-group>
         </view>
-        <view class='input-box flex-wrp'>
+        <view class='input-box flex-wrp skill-box'>
           <view class='seg flex-item' wx:if="{{skillNow == '猎杀冲动' || skillNow == '连珠终结'}}">
             <text class='seg-text'>命中提升倍率%</text>
             <input type='digit' value='{{skillPrecision}}' bindinput='skillPrecisionChange' class='seg-input'></input>
@@ -192,7 +192,7 @@
         <view class='photo-frame'>
           <image class='cover' src="https://gamepaper.cn{{chainBoxNow.cover}}"></image>
         </view>
-        <view class='input-box flex-wrp'>
+        <view class='input-box flex-wrp chain-box'>
           <view class='seg flex-item'>
             <text class='seg-text'>伤害</text>
             <input type='digit' bindinput='chainBoxPowerChange' class='seg-input' value='{{chainBoxNow.power}}'></input>

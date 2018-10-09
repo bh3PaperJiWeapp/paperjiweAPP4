@@ -1,23 +1,29 @@
 <!--pages/submit/submit.wxml-->
 <view class='container'>
-  <image src='../../image/gf_bg.png' class='bottom_bg'></image>
+  <view class='bg-box'>
+    <image src='../../image/gf_bg.png' class='bottom_bg'></image>
+    <image src='../../image/confirm_bg.png' class='confirm_bg'></image>
+  </view>
   <view>
-    
     <view>
-      <text class='miaoju'>当前瞄具选择</text>
-      <text class='mj_name'>{{detail.name}}</text>
-      <text class='mj_xiaoguo'>效果</text>
-      <text class='mj_xiaoguo1'>攻击: {{detail.power}}</text>
-      <text class='mj_xiaoguo2'>命中: {{detail.precision}}</text>
-      <text class='mj_xiaoguo3'>穿甲: {{detail.pierce}}</text>
-      <text class='mj_xiaoguo4'>暴击: {{detail.criticalPossibility}}</text>
-      <text class='mj_xiaoguo5'>爆伤: {{detail.criticalPower}}</text>
-      <text class='mj_xiaoguo6'>弹链: {{detail.chain}}</text>
-        <navigator  open-type='navigateBack' delta='1'><button class='input'>确认</button></navigator>
+      <view>
+        <text class='miaoju'>当前瞄具选择</text>
+        <text class='mj_name' wx:if="{{detail.name == ''}}">无</text>
+        <text class='mj_name' wx:else>{{detail.name}}</text>
+        <text class='mj_xiaoguo'>效果</text>
+        <text class='mj_xiaoguo1'>攻击: {{detail.power}}</text>
+        <text class='mj_xiaoguo2'>命中: {{detail.precision}}</text>
+        <text class='mj_xiaoguo3'>穿甲: {{detail.pierce}}</text>
+        <text class='mj_xiaoguo4'>暴击: {{detail.criticalPossibility}}</text>
+        <text class='mj_xiaoguo5'>爆伤: {{detail.criticalPower}}</text>
+        <text class='mj_xiaoguo6'>弹链: {{detail.chain}}</text>
+      </view>
+      <navigator class='i-nav' open-type='navigateBack' delta='1'>
+        <button class='input'>确认</button>
+      </navigator>
+      <view>
+        <image src='../../image/gfj.png' class='gfjstyle'></image>
+      </view>
     </view>
   </view>
-
-  <image src='../../image/confirm_bg.png' class='confirm_bg'>
-    </image>
-  <image src='../../image/gfj.png' class='gfjstyle'></image>
 </view>
